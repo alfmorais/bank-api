@@ -6,6 +6,7 @@ from sqlmodel import SQLModel
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from app.config.settings import settings
+from app.domain.models.user import User  # noqa
 
 engine = create_async_engine(
     settings.DATABASE_URL,
