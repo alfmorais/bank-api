@@ -38,6 +38,7 @@ asyncio_mode = "auto"
 ruff = "^0.9.3"
 ipdb = "^0.13.13"
 httpx = "^0.28.1"
+pre-commit = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
