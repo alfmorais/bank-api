@@ -3,6 +3,7 @@ from typing import AsyncIterable
 
 from fastapi import FastAPI
 
+from app.api.v1.users import users_routers
 from app.config.settings import settings
 from app.infrastructure.db import init_db
 
@@ -17,7 +18,8 @@ class App(FastAPI):
         )
         self._include_routers()
 
-    def _include_routers(self) -> None: ...
+    def _include_routers(self) -> None:
+        self.include_router(router=users_routers)
 
 
 @asynccontextmanager
